@@ -1,6 +1,6 @@
 import React from 'react'
 import { Switch, Route, Link } from 'react-router-dom';
-import { Layour, Typograpy, Space } from 'antd';
+import { Layout, Typograpy, Space } from 'antd';
 
 
 const App = () => {
@@ -13,7 +13,7 @@ const App = () => {
 
         </div>
         <div className="footer">
-            
+
         </div>
     </div>
   )
