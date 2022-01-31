@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { Switch, Route, Link } from 'react-router-dom';
 import { Layout, Typograpy, Space } from 'antd';
 
