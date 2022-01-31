@@ -1,6 +1,6 @@
 import React from 'react';
 import { Switch, Route, Link } from 'react-router-dom';
-import { Layout, Typograpy, Space } from 'antd';
+import { Layout, Typography, Space } from 'antd';
 
 import { Navbar, HomePage, Exchanges, Cryptocurrencies, CryptoDetails, News} from './components';
 import './App.css'
@@ -33,9 +33,17 @@ const App = () => {
               </Switch>
             </div>
           </Layout>
-        </div>
-        <div className="footer">
-
+          <div className="footer">
+            <Typography.Title level={5} style={{color: 'white', textAlign: 'center'}}>
+              CryptoCrunch <br/>
+              All rights reserved
+            </Typography.Title>
+            <Space>
+              <Link to='/'>Home</Link>
+              <Link to='/exchanges'>exchanges</Link>
+              <Link to='/news'>News</Link>
+            </Space>
+          </div>
         </div>
     </div>
   )
