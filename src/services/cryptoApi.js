@@ -16,10 +16,14 @@ const baseUrl = 'https://coinranking1.p.rapidapi.com/exchanges'
       baseQuery: fetchBaseQuery({ baseUrl }),
       endpoints : (builder) => ({
           getCryptos: builder.query({
-              query: () => createRequest('/exchanges')
+              query: () => createRequest('/coins')
           })
       })
   });
+
+  export const {
+      useGetCryptosQuery, 
+  }
 
 //   var options = {
 //     method: 'GET',
