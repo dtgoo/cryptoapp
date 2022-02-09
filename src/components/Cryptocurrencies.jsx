@@ -9,7 +9,11 @@ const Cryptocurrencies = () => {
   const [cryptos, setCryptos] = useState(cryptosList?.data?.coins);
   const [searchTerm, setSearchTerm] = useState('');
 
-  console.log("CHECK HERE", cryptos)
+  useEffect(() => {
+    setCryptos(cryptosList?.data?.coins);
+
+    const filteredData = cryptosList?.data?.coins.filter((coin) => coin.name.toLowerCase().includes(searchTerm.toLowerCase()));
+  }, [cryptosList, searchTerm]);
 
   if(isFetching) return 'loading...'
 
