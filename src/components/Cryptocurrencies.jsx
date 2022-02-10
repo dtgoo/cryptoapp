@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 import millify from 'millify';
-import { Link } from 'react-router-dom'
-import { Card, Row, Col, Input} from 'antd'
+import { Link } from 'react-router-dom';
+import { Card, Row, Col, Input} from 'antd';
 import { useGetCryptosQuery } from '../services/cryptoApi';
 
 const Cryptocurrencies = () => {
@@ -15,7 +15,7 @@ const Cryptocurrencies = () => {
     const filteredData = cryptosList?.data?.coins.filter((coin) => coin.name.toLowerCase().includes(searchTerm.toLowerCase()));
   }, [cryptosList, searchTerm]);
 
-  if(isFetching) return 'loading...'
+  if(isFetching) return 'loading...';
 
   return (
     <>
