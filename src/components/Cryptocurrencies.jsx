@@ -5,7 +5,7 @@ import { Card, Row, Col, Input} from 'antd';
 import { useGetCryptosQuery } from '../services/cryptoApi';
 
 const Cryptocurrencies = ({ simplified }) => {
-  const count = simplified? 10 : 50;
+  const count = simplified ? 10 : 50;
   const { data: cryptosList, isFetching} = useGetCryptosQuery(count);
   const [cryptos, setCryptos] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');

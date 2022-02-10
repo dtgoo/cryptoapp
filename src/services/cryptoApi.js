@@ -16,7 +16,7 @@ const baseUrl = 'https://coinranking1.p.rapidapi.com'
       baseQuery: fetchBaseQuery({ baseUrl }),
       endpoints : (builder) => ({
           getCryptos: builder.query({
-              query: () => createRequest('/coins')
+              query: (count) => createRequest(`/coins?limit=${count}`)
           })
       })
   });
