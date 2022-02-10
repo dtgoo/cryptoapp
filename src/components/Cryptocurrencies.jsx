@@ -12,6 +12,7 @@ const Cryptocurrencies = () => {
   useEffect(() => {
     // allows to filter the searched coin out of the 50 coins we get back from API call
     const filteredData = cryptosList?.data?.coins.filter((coin) => coin.name.toLowerCase().includes(searchTerm.toLowerCase()));
+    console.log(filteredData);
     setCryptos(filteredData);
   }, [cryptosList, searchTerm]);
 
