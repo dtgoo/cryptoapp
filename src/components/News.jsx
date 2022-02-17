@@ -1,6 +1,7 @@
 import React from 'react';
 import { Select, Typography, Row, Column, Avatar, Card } from 'antd';
 import moment from 'moment';
+import { useGetCryptoNewsQuery } from '../services/cryptoNewsApi';
 
 const News = () => {
   return (
