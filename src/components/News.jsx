@@ -7,7 +7,7 @@ const { Text, Title } = Typography;
 const { Option } = Select; 
 
 const News = ({ simplified }) => {
-  const {data: cryptoNews } = useGetCryptoNewsQuery({ newsCategory: 'Cryptocurrency', count : simplified? 6: 12});
+  const {data: cryptoNews } = useGetCryptoNewsQuery({ newsCategory: 'Cryptocurrency', count : simplified ? 6 : 12});
 
   if (!cryptoNews?.value) return 'Loading...';
   
@@ -31,4 +31,4 @@ const News = ({ simplified }) => {
   )
 }
 
-export default News
+export default News;
