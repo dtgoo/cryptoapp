@@ -25,8 +25,9 @@ const News = ({ simplified }) => {
                 <img src={news?.image?.thumbnail?.contentUrl || demoImage } alt='news'/>
               </div>
               <p>
-                {news.description > 100 ? `{news.description.substring(1,100)}...`
-                : news.description}
+                {news.description > 100 ? `${news.description.substring(1,100)}...`
+                : news.description
+                }
               </p>
             </a>
 
