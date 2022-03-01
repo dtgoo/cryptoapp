@@ -29,9 +29,9 @@ const News = ({ simplified }) => {
                 : news.description
                 }
               </p>
-              <div className='prodivider-container'>
+              <div className='provider-container'>
                 <div>
-                  <Avatar src={news.provider[0]?.image?.contentUrl || demoImage} alt='' />
+                  <Avatar src={news.provider[0]?.image?.thumbnail?.contentUrl || demoImage} alt='' />
                   <Text>{moment(news.datePublished).startOf('ss').fromNow()}</Text>
                 </div>
               </div>
