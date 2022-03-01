@@ -29,6 +29,12 @@ const News = ({ simplified }) => {
                 : news.description
                 }
               </p>
+              <div className='prodivider-container'>
+                <div>
+                  <Avatar src={news.provider[0]?.image?.contentUrl || demoImage} alt='' />
+                  <Text>{moment(news.datePublished).startOf('ss').fromNow()}</Text>
+                </div>
+              </div>
             </a>
 
           </Card>
