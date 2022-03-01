@@ -2,6 +2,7 @@ import React from 'react';
 import { Select, Typography, Row, Col, Avatar, Card } from 'antd';
 import moment from 'moment';
 import { useGetCryptoNewsQuery } from '../services/cryptoNewsApi';
+import demoImage from "../images/doge_small.png"
 
 const { Text, Title } = Typography;
 const { Option } = Select; 
@@ -21,7 +22,12 @@ const News = ({ simplified }) => {
                 <Title className='news-title' level={4}>
                   {news.name}
                 </Title>
+                <img src={news?.image?.thumbnail?.contentUrl || demoImage } alt='news'/>
               </div>
+              <p>
+                {news.description > 100 ? `{news.description.substring(1,100)}...`
+                : news.description}
+              </p>
             </a>
 
           </Card>
