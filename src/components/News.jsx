@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Select, Typography, Row, Col, Avatar, Card } from 'antd';
 import moment from 'moment';
 import { useGetCryptoNewsQuery } from '../services/cryptoNewsApi';
@@ -8,12 +8,27 @@ const { Text, Title } = Typography;
 const { Option } = Select; 
 
 const News = ({ simplified }) => {
+  const[newsCategory, setNewsCategory] = useState(initialState);
+  
   const {data: cryptoNews } = useGetCryptoNewsQuery({ newsCategory: 'Cryptocurrency', count : simplified ? 6 : 12});
 
   if (!cryptoNews?.value) return 'Loading...';
   
   return (
     <Row gutter={[24, 24]}>
+      {!simplified && (
+        <Col span={24}>
+          <Select
+            showSearch
+            className='select-news'
+            placeholder='Select a Crypto'
+            optionFilterProp='children'
+            onChange={(value)=> console.log(value)}
+            filterOption={(input, option) => option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0}
+            >
+          </Select>
+        </Col>
+      )}
       {cryptoNews.value.map((news, i) => (
         <Col xs={24} sm={12} lg={8} key={i}>
           <Card hoverable className='news-card'>
