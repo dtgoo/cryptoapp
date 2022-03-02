@@ -8,7 +8,7 @@ const { Text, Title } = Typography;
 const { Option } = Select; 
 
 const News = ({ simplified }) => {
-  const[newsCategory, setNewsCategory] = useState(initialState);
+  const[newsCategory, setNewsCategory] = useState('Cryptocurrency');
   
   const {data: cryptoNews } = useGetCryptoNewsQuery({ newsCategory: 'Cryptocurrency', count : simplified ? 6 : 12});
 
