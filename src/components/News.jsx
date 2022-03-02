@@ -22,7 +22,7 @@ const News = ({ simplified }) => {
                 <Title className='news-title' level={4}>
                   {news.name}
                 </Title>
-                <img src={news?.image?.thumbnail?.contentUrl || demoImage } alt='news'/>
+                <img style={{ maxWidth: '200px' , maxHeight: '100px'}} src={news?.image?.thumbnail?.contentUrl || demoImage } alt='news'/>
               </div>
               <p>
                 {news.description > 100 ? `${news.description.substring(1,100)}...`
