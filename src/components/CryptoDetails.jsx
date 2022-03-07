@@ -9,9 +9,10 @@ const { Title, Text } = Typography;
 const { Option } = Select; 
 
 const CryptoDetails = () => {
+  const { coinId } = useParams();
   return (
     <div>
-      Hello Fool
+      Crypto Details {coinId}
     </div>
   )
 }
