@@ -11,7 +11,7 @@ const { Option } = Select;
 const CryptoDetails = () => {
   return (
     <div>
-      CryptoDetails
+      Hello Fool
     </div>
   )
 }
